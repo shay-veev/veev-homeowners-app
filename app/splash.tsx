@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
+import React, { useEffect, useRef } from 'react';
+import { View, StyleSheet, Dimensions, Animated } from 'react-native';
 import { Svg, Path } from 'react-native-svg';
 import { useRouter } from 'expo-router';
 
@@ -7,18 +7,56 @@ const { width, height } = Dimensions.get('window');
 
 export default function SplashScreen() {
   const router = useRouter();
+  const slideAnim = useRef(new Animated.Value(-width)).current;
+  const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
+    // Slide in animation
+    Animated.parallel([
+      Animated.timing(slideAnim, {
+        toValue: 0,
+        duration: 800,
+        useNativeDriver: true,
+      }),
+      Animated.timing(fadeAnim, {
+        toValue: 1,
+        duration: 800,
+        useNativeDriver: true,
+      }),
+    ]).start();
+
+    // Start slide out animation after 5 seconds (leaving 1 second for slide out)
     const timer = setTimeout(() => {
-      router.replace('/(tabs)');
-    }, 6000);
+      Animated.parallel([
+        Animated.timing(slideAnim, {
+          toValue: width,
+          duration: 800,
+          useNativeDriver: true,
+        }),
+        Animated.timing(fadeAnim, {
+          toValue: 0,
+          duration: 800,
+          useNativeDriver: true,
+        }),
+      ]).start(() => {
+        router.replace('/(tabs)');
+      });
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [router]);
 
   return (
     <View style={styles.container}>
-      <View style={styles.logoContainer}>
+      <Animated.View 
+        style={[
+          styles.logoContainer,
+          {
+            transform: [{ translateX: slideAnim }],
+            opacity: fadeAnim,
+          }
+        ]}
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="80%" viewBox="0 0 1355.696512 650" data-app="Xyris">
     <defs>
     </defs>
@@ -66,7 +104,7 @@ export default function SplashScreen() {
     </g>
 </svg>
 
-      </View>
+      </Animated.View>
     </View>
   );
 }
