@@ -10,9 +10,9 @@ export default function SplashScreen() {
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const [showSvg, setShowSvg] = useState(false);
 
-  /*seEffect(() => {
+ /* useEffect(() => {
     // Slide in animation
-    Animated.parallel([
+   Animated.parallel([
       Animated.timing(slideAnim, {
         toValue: 0,
         duration: 800,
@@ -26,8 +26,8 @@ export default function SplashScreen() {
     ]).start(() => {
       // Show SVG after slide-in animation completes
       setShowSvg(true);
-    });*/
-
+    }); */
+  setShowSvg(true);
     // Start slide out animation after 5 seconds (leaving 1 second for slide out)
     const timer = setTimeout(() => {
       Animated.parallel([
