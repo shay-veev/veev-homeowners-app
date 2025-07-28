@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { View, StyleSheet, Dimensions, Animated } from 'react-native';
-import { Svg, Path } from 'react-native-svg';
 import { useRouter } from 'expo-router';
 
 const { width, height } = Dimensions.get('window');
@@ -9,6 +8,7 @@ export default function SplashScreen() {
   const router = useRouter();
   const slideAnim = useRef(new Animated.Value(-width)).current;
   const fadeAnim = useRef(new Animated.Value(0)).current;
+  const [showSvg, setShowSvg] = useState(false);
 
   useEffect(() => {
     // Slide in animation
@@ -23,7 +23,10 @@ export default function SplashScreen() {
         duration: 800,
         useNativeDriver: true,
       }),
-    ]).start();
+    ]).start(() => {
+      // Show SVG after slide-in animation completes
+      setShowSvg(true);
+    });
 
     // Start slide out animation after 5 seconds (leaving 1 second for slide out)
     const timer = setTimeout(() => {
@@ -57,7 +60,8 @@ export default function SplashScreen() {
           }
         ]}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="80%" viewBox="0 0 1355.696512 650" data-app="Xyris">
+        {showSvg && (
+          <svg xmlns="http://www.w3.org/2000/svg" width="80%" viewBox="0 0 1355.696512 650" data-app="Xyris">
     <defs>
     </defs>
     <g transform="">
@@ -102,7 +106,8 @@ export default function SplashScreen() {
         <animate attributeName="opacity" keyTimes="0; 0.41800858867029383; 0.6659719633362925; 1" values="0; 0; 1; 1" begin="-0.00001" dur="5.988020000000001" fill="freeze" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 1 1">
         </animate>
     </g>
-</svg>
+          </svg>
+        )}
 
       </Animated.View>
     </View>
