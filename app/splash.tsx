@@ -44,7 +44,7 @@ export default function SplashScreen() {
       ]).start(() => {
         router.replace('/(tabs)');
       });
-    }, 5000);
+    }, 60000);
 
     return () => clearTimeout(timer);
   }, [router]);
