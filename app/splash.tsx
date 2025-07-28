@@ -19,7 +19,7 @@ export default function SplashScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1355.696512 650" data-app="Xyris">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80%" viewBox="0 0 1355.696512 650" data-app="Xyris">
     <defs>
     </defs>
     <g transform="">
