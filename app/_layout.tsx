@@ -36,6 +36,7 @@ export default function RootLayout() {
   return (
     <>
       <Stack>
+        <Stack.Screen name="splash" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" options={{ headerShown: false }} />
       </Stack>
