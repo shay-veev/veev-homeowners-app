@@ -20,7 +20,7 @@ export default function SplashScreen() {
       }),
       Animated.timing(fadeAnim, {
         toValue: 1,
-        duration: 9000,
+        duration: 800,
         useNativeDriver: true,
       }),
     ]).start(() => {
@@ -33,12 +33,12 @@ export default function SplashScreen() {
       Animated.parallel([
         Animated.timing(slideAnim, {
           toValue: width,
-          duration: 900,
+          duration: 1200,
           useNativeDriver: true,
         }),
         Animated.timing(fadeAnim, {
           toValue: 0,
-          duration: 900,
+          duration: 1200,
           useNativeDriver: true,
         }),
       ]).start(() => {
