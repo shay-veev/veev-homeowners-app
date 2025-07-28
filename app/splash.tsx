@@ -15,7 +15,7 @@ export default function SplashScreen() {
     Animated.parallel([
       Animated.timing(slideAnim, {
         toValue: 0,
-        duration: 900,
+        duration: 9000,
         useNativeDriver: true,
       }),
       Animated.timing(fadeAnim, {
