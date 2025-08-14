@@ -61,23 +61,23 @@ export default function SplashScreen() {
         ]}
       >
         {showSvg && (
-          <svg xmlns="http://www.w3.org/2000/svg" width="80%" viewBox="0 0 1355.696512 650" data-app="Xyris">
+         <svg xmlns="http://www.w3.org/2000/svg" width="1355.696512" height="650" viewBox="0 0 1355.696512 650" data-app="Xyris">
     <defs>
     </defs>
     <g transform="">
-        <path d="M 155.364 148.372 C 155.364 148.372 167.8 461.458 212.107 468.67 C 244.211 473.897 418.919 52.0578 418.919 52.0578" fill="none" stroke="#CAF2CE" strokeLinecap="round" strokeLinejoin="round" strokeWidth="70" transform="" strokeDasharray="2000">
+        <path d="M 155.364 148.372 C 155.364 148.372 167.8 461.458 212.107 468.67 C 244.211 473.897 418.919 52.0578 418.919 52.0578" fill="none" stroke="rgb(202, 242, 206)" stroke-linecap="round" stroke-linejoin="round" stroke-width="70" transform="" stroke-dasharray="2000">
             <animate attributeName="stroke-dashoffset" keyTimes="0; 0.007299611234309479; 0.5838952279918205; 1" values="2000;2000;0;0" begin="-0.00001" dur="1.7080199999999999" fill="freeze" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 1 1">
             </animate>
         </path>
-        <path d="M 975.141 148.372 C 975.141 148.372 987.59 461.458 1031.88 468.67 C 1063.99 473.897 1238.7 52.0578 1238.7 52.0578" fill="none" stroke="#CAF2CE" strokeLinecap="round" strokeLinejoin="round" strokeWidth="70" transform="" strokeDasharray="2000">
+        <path d="M 975.141 148.372 C 975.141 148.372 987.59 461.458 1031.88 468.67 C 1063.99 473.897 1238.7 52.0578 1238.7 52.0578" fill="none" stroke="rgb(202, 242, 206)" stroke-linecap="round" stroke-linejoin="round" stroke-width="70" transform="" stroke-dasharray="2000">
             <animate attributeName="stroke-dashoffset" keyTimes="0; 0.5979607356039005; 1" values="2000; 2000; 0" begin="-0.00001" dur="2.50305542895772" fill="freeze" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1">
             </animate>
         </path>
-        <path d="M 700.85 406.695 C 700.85 406.695 826.993 332.332 864.388 234.168 C 901.791 136.004 793.103 83.4152 707.794 217.808 C 622.485 352.198 718.064 480.944 834.571 468.719 C 975.293 453.953 981.554 240.011 981.554 240.011" fill="none" stroke="#CAF2CE" strokeLinecap="round" strokeLinejoin="round" strokeWidth="70" transform="" strokeDasharray="2000">
+        <path d="M 700.85 406.695 C 700.85 406.695 826.993 332.332 864.388 234.168 C 901.791 136.004 793.103 83.4152 707.794 217.808 C 622.485 352.198 718.064 480.944 834.571 468.719 C 975.293 453.953 981.554 240.011 981.554 240.011" fill="none" stroke="rgb(202, 242, 206)" stroke-linecap="round" stroke-linejoin="round" stroke-width="70" transform="" stroke-dasharray="2000">
             <animate attributeName="stroke-dashoffset" keyTimes="0; 0.49892727642385143; 1" values="2000;2000;0" begin="-0.00001" dur="1.9988945785924994" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0 0 1 1">
             </animate>
         </path>
-        <path d="M 437.354 406.695 C 437.354 406.695 563.497 332.332 600.892 234.168 C 638.288 136.004 529.607 83.4152 444.298 217.808 C 358.989 352.198 455.61 488.507 571.074 468.719 C 615.265 461.145 660.436 436.627 701.164 407.128" fill="none" stroke="#CAF2CE" strokeLinecap="round" strokeLinejoin="round" strokeWidth="70" transform="" strokeOpacity="1">
+        <path d="M 437.354 406.695 C 437.354 406.695 563.497 332.332 600.892 234.168 C 638.288 136.004 529.607 83.4152 444.298 217.808 C 358.989 352.198 455.61 488.507 571.074 468.719 C 615.265 461.145 660.436 436.627 701.164 407.128" fill="none" stroke="rgb(202, 242, 206)" stroke-linecap="round" stroke-linejoin="round" stroke-width="70" transform="" stroke-dasharray="2000" stroke-opacity="1">
             <animate attributeName="stroke-dashoffset" keyTimes="0; 0.3582148331210845; 1" values="2000; 2000; 0" begin="-0.06412210317460316" dur="1.560849009516786" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0 0 1 1">
             </animate>
         </path>
@@ -106,7 +106,8 @@ export default function SplashScreen() {
         <animate attributeName="opacity" keyTimes="0; 0.41800858867029383; 0.6659719633362925; 1" values="0; 0; 1; 1" begin="-0.00001" dur="5.988020000000001" fill="freeze" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 1 1">
         </animate>
     </g>
-          </svg>
+</svg>
+
         )}
 
       </Animated.View>
