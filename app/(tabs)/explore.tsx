@@ -45,19 +45,19 @@ export default function ExploreScreen() {
   const getSystemIcon = (system: string) => {
     switch (system) {
       case 'Electrical':
-        return <Zap size={20} color="#012827" strokeWidth={2} />;
+        return <Zap size={20} color="#2D2D2D" strokeWidth={2} />;
       case 'Plumbing':
-        return <Droplets size={20} color="#012827" strokeWidth={2} />;
+        return <Droplets size={20} color="#2D2D2D" strokeWidth={2} />;
       case 'HVAC':
-        return <Thermometer size={20} color="#012827" strokeWidth={2} />;
+        return <Thermometer size={20} color="#2D2D2D" strokeWidth={2} />;
       case 'Smart Home':
-        return <Wifi size={20} color="#012827" strokeWidth={2} />;
+        return <Wifi size={20} color="#2D2D2D" strokeWidth={2} />;
       case 'Insulation':
-        return <Layers size={20} color="#012827" strokeWidth={2} />;
+        return <Layers size={20} color="#2D2D2D" strokeWidth={2} />;
       case 'Ventilation':
-        return <Eye size={20} color="#012827" strokeWidth={2} />;
+        return <Eye size={20} color="#2D2D2D" strokeWidth={2} />;
       default:
-        return <Layers size={20} color="#012827" strokeWidth={2} />;
+        return <Layers size={20} color="#2D2D2D" strokeWidth={2} />;
     }
   };
 
@@ -76,7 +76,7 @@ export default function ExploreScreen() {
       </View>
 
       <View style={styles.virtualTourCard}>
-        <Eye size={32} color="#E6EFE6" strokeWidth={2} />
+        <Eye size={32} color="#CAF2CE" strokeWidth={2} />
         <Text style={styles.virtualTourTitle}>3D Virtual Tour</Text>
         <Text style={styles.virtualTourSubtitle}>
           Explore this room in 3D and see behind the walls
@@ -97,7 +97,7 @@ export default function ExploreScreen() {
               <Text style={styles.systemName}>{system}</Text>
               <Text style={styles.systemStatus}>View Details</Text>
             </View>
-            <ChevronRight size={20} color="#7A9B7A" strokeWidth={2} />
+            <ChevronRight size={20} color="#8A8A8A" strokeWidth={2} />
           </TouchableOpacity>
         ))}
       </View>
@@ -105,7 +105,7 @@ export default function ExploreScreen() {
       <View style={styles.wallSection}>
         <Text style={styles.wallTitle}>Wall Construction</Text>
         <View style={styles.wallCard}>
-          <Layers size={24} color="#012827" strokeWidth={2} />
+          <Layers size={24} color="#2D2D2D" strokeWidth={2} />
           <View style={styles.wallInfo}>
             <Text style={styles.wallName}>VEEV Panel System</Text>
             <Text style={styles.wallDescription}>
@@ -132,7 +132,7 @@ export default function ExploreScreen() {
           <>
             {/* Hero Section */}
             <View style={styles.heroSection}>
-              <Eye size={48} color="#012827" strokeWidth={2} />
+              <Eye size={48} color="#2D2D2D" strokeWidth={2} />
               <Text style={styles.heroTitle}>Explore Your Home</Text>
               <Text style={styles.heroSubtitle}>
                 Take a virtual 3D tour and discover what's behind your walls
@@ -142,7 +142,7 @@ export default function ExploreScreen() {
             {/* Quick Tour Button */}
             <TouchableOpacity style={styles.quickTourButton}>
               <View style={styles.quickTourContent}>
-                <Eye size={24} color="#E6EFE6" strokeWidth={2} />
+                <Eye size={24} color="#CAF2CE" strokeWidth={2} />
                 <View style={styles.quickTourText}>
                   <Text style={styles.quickTourTitle}>Full Home Tour</Text>
                   <Text style={styles.quickTourSubtitle}>Complete 3D walkthrough</Text>
@@ -165,7 +165,7 @@ export default function ExploreScreen() {
                     <Text style={styles.roomSystems}>
                       {room.systems.length} systems
                     </Text>
-                    <ChevronRight size={16} color="#7A9B7A" strokeWidth={2} />
+                    <ChevronRight size={16} color="#8A8A8A" strokeWidth={2} />
                   </TouchableOpacity>
                 ))}
               </View>
@@ -175,7 +175,7 @@ export default function ExploreScreen() {
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Exploration Features</Text>
               <View style={styles.featureCard}>
-                <Layers size={24} color="#012827" strokeWidth={2} />
+                <Layers size={24} color="#2D2D2D" strokeWidth={2} />
                 <View style={styles.featureContent}>
                   <Text style={styles.featureTitle}>X-Ray Vision</Text>
                   <Text style={styles.featureDescription}>
@@ -184,7 +184,7 @@ export default function ExploreScreen() {
                 </View>
               </View>
               <View style={styles.featureCard}>
-                <Eye size={24} color="#012827" strokeWidth={2} />
+                <Eye size={24} color="#2D2D2D" strokeWidth={2} />
                 <View style={styles.featureContent}>
                   <Text style={styles.featureTitle}>3D Navigation</Text>
                   <Text style={styles.featureDescription}>
@@ -193,7 +193,7 @@ export default function ExploreScreen() {
                 </View>
               </View>
               <View style={styles.featureCard}>
-                <Zap size={24} color="#012827" strokeWidth={2} />
+                <Zap size={24} color="#2D2D2D" strokeWidth={2} />
                 <View style={styles.featureContent}>
                   <Text style={styles.featureTitle}>System Information</Text>
                   <Text style={styles.featureDescription}>
@@ -212,11 +212,11 @@ export default function ExploreScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#012827',
+    backgroundColor: '#3D3D3D',
   },
   content: {
     flex: 1,
-    backgroundColor: '#F8FFFE',
+    backgroundColor: '#F5F5F5',
   },
   heroSection: {
     alignItems: 'center',
@@ -225,24 +225,24 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: '#E5F3E5',
+    borderColor: '#E0E0E0',
   },
   heroTitle: {
     fontSize: 28,
     fontFamily: 'Inter-Bold',
-    color: '#012827',
+    color: '#2D2D2D',
     marginTop: 16,
     marginBottom: 8,
   },
   heroSubtitle: {
     fontSize: 16,
     fontFamily: 'Inter-Regular',
-    color: '#7A9B7A',
+    color: '#8A8A8A',
     textAlign: 'center',
     lineHeight: 22,
   },
   quickTourButton: {
-    backgroundColor: '#012827',
+    backgroundColor: '#3D3D3D',
     marginHorizontal: 20,
     borderRadius: 16,
     padding: 20,
@@ -259,13 +259,13 @@ const styles = StyleSheet.create({
   quickTourTitle: {
     fontSize: 18,
     fontFamily: 'Inter-SemiBold',
-    color: '#E6EFE6',
+    color: '#CAF2CE',
     marginBottom: 4,
   },
   quickTourSubtitle: {
     fontSize: 14,
     fontFamily: 'Inter-Regular',
-    color: '#B8D4B8',
+    color: '#E0E0E0',
   },
   section: {
     paddingHorizontal: 20,
@@ -274,7 +274,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 20,
     fontFamily: 'Inter-SemiBold',
-    color: '#012827',
+    color: '#2D2D2D',
     marginBottom: 16,
   },
   roomGrid: {
@@ -287,18 +287,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#E5F3E5',
+    borderColor: '#E0E0E0',
   },
   roomName: {
     fontSize: 16,
     fontFamily: 'Inter-SemiBold',
-    color: '#012827',
+    color: '#2D2D2D',
     flex: 1,
   },
   roomSystems: {
     fontSize: 14,
     fontFamily: 'Inter-Regular',
-    color: '#7A9B7A',
+    color: '#8A8A8A',
     marginRight: 8,
   },
   featureCard: {
@@ -309,7 +309,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#E5F3E5',
+    borderColor: '#E0E0E0',
   },
   featureContent: {
     flex: 1,
@@ -318,13 +318,13 @@ const styles = StyleSheet.create({
   featureTitle: {
     fontSize: 16,
     fontFamily: 'Inter-SemiBold',
-    color: '#012827',
+    color: '#2D2D2D',
     marginBottom: 4,
   },
   featureDescription: {
     fontSize: 14,
     fontFamily: 'Inter-Regular',
-    color: '#7A9B7A',
+    color: '#8A8A8A',
     lineHeight: 20,
   },
   // Room Detail Styles
@@ -337,7 +337,7 @@ const styles = StyleSheet.create({
   backButtonText: {
     fontSize: 16,
     fontFamily: 'Inter-Medium',
-    color: '#012827',
+    color: '#2D2D2D',
   },
   roomHeader: {
     marginBottom: 24,
@@ -345,17 +345,17 @@ const styles = StyleSheet.create({
   roomTitle: {
     fontSize: 28,
     fontFamily: 'Inter-Bold',
-    color: '#012827',
+    color: '#2D2D2D',
     marginBottom: 8,
   },
   roomDescription: {
     fontSize: 16,
     fontFamily: 'Inter-Regular',
-    color: '#7A9B7A',
+    color: '#8A8A8A',
     lineHeight: 22,
   },
   virtualTourCard: {
-    backgroundColor: '#012827',
+    backgroundColor: '#3D3D3D',
     borderRadius: 16,
     padding: 24,
     alignItems: 'center',
@@ -364,19 +364,19 @@ const styles = StyleSheet.create({
   virtualTourTitle: {
     fontSize: 20,
     fontFamily: 'Inter-SemiBold',
-    color: '#E6EFE6',
+    color: '#CAF2CE',
     marginTop: 12,
     marginBottom: 8,
   },
   virtualTourSubtitle: {
     fontSize: 14,
     fontFamily: 'Inter-Regular',
-    color: '#B8D4B8',
+    color: '#E0E0E0',
     textAlign: 'center',
     marginBottom: 20,
   },
   tourButton: {
-    backgroundColor: '#E6EFE6',
+    backgroundColor: '#CAF2CE',
     borderRadius: 12,
     paddingHorizontal: 24,
     paddingVertical: 12,
@@ -384,7 +384,7 @@ const styles = StyleSheet.create({
   tourButtonText: {
     fontSize: 16,
     fontFamily: 'Inter-SemiBold',
-    color: '#012827',
+    color: '#2D2D2D',
   },
   systemsSection: {
     marginBottom: 24,
@@ -392,7 +392,7 @@ const styles = StyleSheet.create({
   systemsTitle: {
     fontSize: 20,
     fontFamily: 'Inter-SemiBold',
-    color: '#012827',
+    color: '#2D2D2D',
     marginBottom: 16,
   },
   systemCard: {
@@ -403,13 +403,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#E5F3E5',
+    borderColor: '#E0E0E0',
   },
   systemIcon: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#F8FFFE',
+    backgroundColor: '#F5F5F5',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 12,
@@ -420,13 +420,13 @@ const styles = StyleSheet.create({
   systemName: {
     fontSize: 16,
     fontFamily: 'Inter-SemiBold',
-    color: '#012827',
+    color: '#2D2D2D',
     marginBottom: 2,
   },
   systemStatus: {
     fontSize: 14,
     fontFamily: 'Inter-Regular',
-    color: '#7A9B7A',
+    color: '#8A8A8A',
   },
   wallSection: {
     marginBottom: 24,
@@ -434,7 +434,7 @@ const styles = StyleSheet.create({
   wallTitle: {
     fontSize: 20,
     fontFamily: 'Inter-SemiBold',
-    color: '#012827',
+    color: '#2D2D2D',
     marginBottom: 16,
   },
   wallCard: {
@@ -445,7 +445,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#E5F3E5',
+    borderColor: '#E0E0E0',
   },
   wallInfo: {
     flex: 1,
@@ -454,17 +454,17 @@ const styles = StyleSheet.create({
   wallName: {
     fontSize: 16,
     fontFamily: 'Inter-SemiBold',
-    color: '#012827',
+    color: '#2D2D2D',
     marginBottom: 4,
   },
   wallDescription: {
     fontSize: 14,
     fontFamily: 'Inter-Regular',
-    color: '#7A9B7A',
+    color: '#8A8A8A',
     lineHeight: 20,
   },
   xrayButton: {
-    backgroundColor: '#012827',
+    backgroundColor: '#3D3D3D',
     borderRadius: 12,
     padding: 16,
     flexDirection: 'row',
@@ -474,7 +474,7 @@ const styles = StyleSheet.create({
   xrayButtonText: {
     fontSize: 16,
     fontFamily: 'Inter-SemiBold',
-    color: '#FFFFFF',
+    color: '#CAF2CE',
     marginLeft: 8,
   },
 });

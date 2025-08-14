@@ -104,7 +104,7 @@ export default function ChatScreen() {
                   {message.isUser ? (
                     <User size={16} color="#FFFFFF" strokeWidth={2} />
                   ) : (
-                    <Bot size={16} color="#012827" strokeWidth={2} />
+                    <Bot size={16} color="#2D2D2D" strokeWidth={2} />
                   )}
                 </View>
                 <Text style={styles.messageTime}>
@@ -136,7 +136,7 @@ export default function ChatScreen() {
             value={inputText}
             onChangeText={setInputText}
             placeholder="Ask me anything about your home..."
-            placeholderTextColor="#7A9B7A"
+            placeholderTextColor="#8A8A8A"
             multiline
             maxLength={500}
             onSubmitEditing={sendMessage}
@@ -158,11 +158,11 @@ export default function ChatScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#012827',
+    backgroundColor: '#3D3D3D',
   },
   chatContainer: {
     flex: 1,
-    backgroundColor: '#F8FFFE',
+    backgroundColor: '#F5F5F5',
   },
   messagesContainer: {
     flex: 1,
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: '#012827',
+    backgroundColor: '#3D3D3D',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 8,
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
   messageTime: {
     fontSize: 12,
     fontFamily: 'Inter-Regular',
-    color: '#7A9B7A',
+    color: '#8A8A8A',
   },
   messageBubble: {
     maxWidth: '80%',
@@ -205,13 +205,13 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   userBubble: {
-    backgroundColor: '#012827',
+    backgroundColor: '#3D3D3D',
     borderBottomRightRadius: 4,
   },
   botBubble: {
     backgroundColor: '#FFFFFF',
     borderWidth: 1,
-    borderColor: '#E5F3E5',
+    borderColor: '#E0E0E0',
     borderBottomLeftRadius: 4,
   },
   messageText: {
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
   botText: {
-    color: '#012827',
+    color: '#2D2D2D',
   },
   inputContainer: {
     flexDirection: 'row',
@@ -232,19 +232,19 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     backgroundColor: '#FFFFFF',
     borderTopWidth: 1,
-    borderTopColor: '#E5F3E5',
+    borderTopColor: '#E0E0E0',
   },
   textInput: {
     flex: 1,
     borderWidth: 1,
-    borderColor: '#E5F3E5',
+    borderColor: '#E0E0E0',
     borderRadius: 24,
     paddingHorizontal: 16,
     paddingVertical: 12,
     fontSize: 16,
     fontFamily: 'Inter-Regular',
-    color: '#012827',
-    backgroundColor: '#F8FFFE',
+    color: '#2D2D2D',
+    backgroundColor: '#F5F5F5',
     maxHeight: 100,
     marginRight: 12,
   },
@@ -252,11 +252,11 @@ const styles = StyleSheet.create({
     width: 48,
     height: 48,
     borderRadius: 24,
-    backgroundColor: '#012827',
+    backgroundColor: '#3D3D3D',
     alignItems: 'center',
     justifyContent: 'center',
   },
   sendButtonDisabled: {
-    backgroundColor: '#7A9B7A',
+    backgroundColor: '#8A8A8A',
   },
 });
